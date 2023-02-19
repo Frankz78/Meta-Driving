@@ -271,10 +271,11 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         state = torch.cat([speed, target_point, cmd_one_hot], 1)
         
         # <=========================
-        if PATH_VAE_MODEL is not None and MODEL_TYPE is None:
-            rgb, tick_data = self.__2nd_process(tick_data, state, rgb)
-        elif MODEL_TYPE is not None:
-            rgb, tick_data = self.__simple_process(tick_data, quality=0)
+        with torch.no_grad():
+            if PATH_VAE_MODEL is not None and MODEL_TYPE is None:
+                rgb, tick_data = self.__2nd_process(tick_data, state, rgb)
+            elif MODEL_TYPE is not None:
+                rgb, tick_data = self.__simple_process(tick_data, quality=0)
         # =========================>
         pred= self.net(rgb, state, target_point)
 
