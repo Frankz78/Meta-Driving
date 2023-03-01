@@ -38,6 +38,8 @@ if not top_path_vae_tcp in sys.path:
 from tools.basic_tools import info_show
 from models.svae.svae_model import SoftIntroVAE
 from models.jpeg.jpeg_model import JPEG
+from models.j2k.j2k_model import J2K
+from models.bpg.bpg_model import BPG
 from tools.dataset_tcp import NormalizeManager
 # from pythae_ex.models import AutoModel_Ex
 
@@ -106,13 +108,15 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         if MODEL_TYPE is not None:
             if MODEL_TYPE == 'JPEG':
                 self.vae_manager = JPEG()
-            # elif MODEL_TYPE == 'BPG':
-            #     self.vae_manager = BPG()
-            # else:
-            #     print('The MODEL_TYPE is invalid.')
-            #     exit()
+            elif MODEL_TYPE == 'J2K':
+                self.vae_manager = J2K()
+            elif MODEL_TYPE == 'BPG':
+                 self.vae_manager = BPG()
+            else:
+                 print('The MODEL_TYPE is invalid.')
+                 exit()
             
-        if PATH_VAE_MODEL is not None and MODEL_TYPE is None:
+        elif PATH_VAE_MODEL is not None and MODEL_TYPE is None:
             self.device = torch.device('cuda:0')
             if TCP_PERCEPTION == 'True' and TCP_MEASUREMENT != 'True':
                 self.vae_manager = SoftIntroVAE(cdim=3, zdim=1024, 
