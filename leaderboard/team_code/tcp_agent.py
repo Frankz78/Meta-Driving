@@ -32,11 +32,11 @@ with open('./config/tcp_config.yml') as f:
     dic_path = yaml.load(content, Loader=yaml.SafeLoader)
 
 # Add the top level directory in system path
-top_path_vae_tcp = dic_path['rootPath_VAE_TCP']
+top_path_vae_tcp = dic_path['rootPath_VQVAR_TCP']
 if not top_path_vae_tcp in sys.path:
     sys.path.append(top_path_vae_tcp)
 from tools.common_tools import info_show
-from models.svae.svae_model import SoftIntroVAE
+from models.vqvae2.vqvae2 import VQVAE2
 from models.jpeg.jpeg_model import JPEG
 from models.j2k.j2k_model import J2K
 from models.bpg.bpg_model import BPG
@@ -118,21 +118,8 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
             
         elif PATH_VAE_MODEL is not None and MODEL_TYPE is None:
             self.device = torch.device('cuda:0')
-            if TCP_PERCEPTION == 'True' and TCP_MEASUREMENT != 'True':
-                self.vae_manager = SoftIntroVAE(cdim=3, zdim=1024, 
-                                              channels=(64, 128, 256, 512, 512, 512), 
-                                              image_size=(256,900), conditional=True, 
-                                              cond_dim=1000)
-            elif TCP_PERCEPTION == 'True' and TCP_MEASUREMENT == 'True':
-                self.vae_manager = SoftIntroVAE(cdim=3, zdim=1024, 
-                                              channels=(64, 128, 256, 512, 512, 512), 
-                                              image_size=(256,900), conditional=True, 
-                                              cond_dim=1128)
-            else:
-                print(TCP_PERCEPTION, TCP_MEASUREMENT)
-                self.vae_manager = SoftIntroVAE(cdim=3, zdim=1024, 
-                                              channels=(64, 128, 256, 512, 512, 512), 
-                                              image_size=(256,900))
+            self.vae_manager = VQVAE2(embed_dim=128, n_embed=512, stride_bottom=16)
+
                 
             self.vae_manager.to(self.device)
             weights = torch.load(PATH_VAE_MODEL, map_location=self.device)
@@ -356,15 +343,6 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         torch.cuda.empty_cache()
     
     def __2nd_process(self, tick_data, state, rgb_tcp):
-        if TCP_PERCEPTION == 'True' and TCP_MEASUREMENT == 'True':
-            feature_emb, _ = self.net.perception(rgb_tcp)
-            measurement_feature = self.net.measurements(state)
-            o_cond = torch.cat([feature_emb, measurement_feature], 1)
-        elif TCP_PERCEPTION == 'True' and TCP_MEASUREMENT != 'True':
-            feature_emb, _ = self.net.perception(rgb_tcp)
-            o_cond = feature_emb
-        else:
-            o_cond = None
             
         # Change the channel from H*W*C to C*H*W
         rgb = torch.tensor(tick_data['rgb']).to(self.device, dtype=torch.float32).permute(2, 0, 1)
@@ -372,7 +350,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         rgb = rgb.unsqueeze(0) / 255
         rgb = self.norm_manager.norm(rgb)
         # info_show(rgb, '2nd_rgb')
-        rgb_recon = self.vae_manager.forward(rgb, o_cond, deterministic=True)[-1]
+        rgb_recon = self.vae_manager.forward(rgb)[0]
         # For saving
         tick_data['rgb'] = self.norm_manager.image_2_rawImage(rgb_recon)
         # info_show(rgb_recon, '2nd_rgb_recon')
