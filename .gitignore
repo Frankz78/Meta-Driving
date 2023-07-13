@@ -1,2 +1,6 @@
 
 config/tcp_config.yml
+
+*.pyc
+
+results_TCP.json
