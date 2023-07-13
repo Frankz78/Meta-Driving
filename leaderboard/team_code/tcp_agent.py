@@ -32,18 +32,21 @@ with open('./config/tcp_config.yml') as f:
     dic_path = yaml.load(content, Loader=yaml.SafeLoader)
 
 # Add the top level directory in system path
-top_path_vae_tcp = dic_path['rootPath_VQVAR_TCP']
+top_path_vae_tcp = dic_path['rootPath_VAE_TCP']
 if not top_path_vae_tcp in sys.path:
     sys.path.append(top_path_vae_tcp)
 from tools.common_tools import info_show
-from models.vqvae2.vqvae2 import VQVAE2
+from models.svae.svae_model import SoftIntroVAE
+from models.channel.channel_network import ChannelCodec
 from models.jpeg.jpeg_model import JPEG
 from models.j2k.j2k_model import J2K
 from models.bpg.bpg_model import BPG
 from tools.dataset_tcp import NormalizeManager
+from tools.common_tools import reparameterize
 # from pythae_ex.models import AutoModel_Ex
 
 PATH_VAE_MODEL = os.environ.get('PATH_VAE_MODEL', None)
+PATH_CH_MODEL =  os.environ.get('PATH_CH_MODEL', None)  
 SAVE_PATH = os.environ.get('SAVE_PATH', None)
 TCP_PERCEPTION = os.environ.get('TCP_PERCEPTION', None)
 TCP_MEASUREMENT = os.environ.get('TCP_MEASUREMENT', None)
@@ -118,10 +121,15 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
             
         elif PATH_VAE_MODEL is not None and MODEL_TYPE is None:
             self.device = torch.device('cuda:0')
-            self.vae_manager = VQVAE2(embed_dim=128, n_embed=512, stride_bottom=16)
 
-                
+            self.vae_manager = SoftIntroVAE(cdim=3, zdim=1024, 
+                                          channels=[64, 128, 256, 512, 512, 512], 
+                                          image_size=(256,900))
+            self.ch_manager = ChannelCodec(1024)
+            
             self.vae_manager.to(self.device)
+            self.ch_manager.to(self.device)
+            
             weights = torch.load(PATH_VAE_MODEL, map_location=self.device)
             self.vae_manager.load_state_dict(weights['model'], strict=False)
             self.vae_manager.eval()
@@ -343,20 +351,43 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         torch.cuda.empty_cache()
     
     def __2nd_process(self, tick_data, state, rgb_tcp):
-            
+        o_cond = None
+        
         # Change the channel from H*W*C to C*H*W
         rgb = torch.tensor(tick_data['rgb']).to(self.device, dtype=torch.float32).permute(2, 0, 1)
         # Change range to [0, 1]
         rgb = rgb.unsqueeze(0) / 255
         rgb = self.norm_manager.norm(rgb)
         # info_show(rgb, '2nd_rgb')
-        rgb_recon = self.vae_manager.forward(rgb)[0]
+        img_mu, img_logvar = self.vae_manager.encode(rgb)
+        
+        # # img_z = reparameterize(img_mu, img_logvar)
+        # ch_mu, ch_logvar = self.ch_manager.encode(img_mu)
+        # # ch_z = reparameterize(ch_mu, ch_logvar)
+        
+        # # ch_z_rec = self.psnr_add(ch_mu)
+        # ch_z_rec = ch_mu
+        
+        # img_z_rec = self.ch_manager.decode(ch_z_rec)
+        # batch_img_rec = self.vae_manager.decode(img_z_rec)
+        batch_img_rec = self.vae_manager.decode(img_mu)
+        
+        
         # For saving
-        tick_data['rgb'] = self.norm_manager.image_2_rawImage(rgb_recon)
+        tick_data['rgb'] = self.norm_manager.image_2_rawImage(batch_img_rec)
         # info_show(rgb_recon, '2nd_rgb_recon')
-        rgb_recon = self.norm_manager.realBatch_2_tcpBatch(rgb_recon)
+        rgb_recon = self.norm_manager.realBatch_2_tcpBatch(batch_img_rec)
         
         return rgb_recon, tick_data
+    
+    def psnr_add(self, img_mu, psnr=10):
+        # Obtain the peak power of each sample
+        max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
+        noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
+                                                   torch.tensor(-(psnr/10)).to(self.device)))
+        noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
+        img_mu_noise = img_mu + noise
+        return img_mu_noise
     
     def __simple_process(self, tick_data, quality=0):
         rgb = tick_data['rgb']

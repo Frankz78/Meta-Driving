@@ -1,3 +1,2 @@
 # yaml, general config
-rootPath_VAE_TCP: '/home/eidos/Workspace/Git_ws/svae-tcp'
-rootPath_VQVAR_TCP: '/home/eidos/Workspace/Git_ws/VQVAE_TCP'
+rootPath_VAE_TCP: '/home/csi/jsccc/VQVAE_TCP'

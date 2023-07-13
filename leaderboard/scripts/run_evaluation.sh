@@ -1,5 +1,5 @@
 #!/bin/bash
-export CARLA_ROOT=/home/eidos/Workspace/carla
+export CARLA_ROOT=/home/csi/carla
 export CARLA_SERVER=${CARLA_ROOT}/CarlaUE4.sh
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla
@@ -18,15 +18,16 @@ export RESUME=False
 
 
 # TCP evaluation
-export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid.xml
+export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid_1_route_town05.xml
 export TEAM_AGENT=team_code/tcp_agent.py
-export TEAM_CONFIG=/home/eidos/Warehouse/Teledriving/TCP_agent/epoch=59-last.ckpt
+export TEAM_CONFIG=/home/csi/jsccc/input_data/epoch=59-last.ckpt
 export CHECKPOINT_ENDPOINT=results_TCP.json
 export SCENARIOS=leaderboard/data/scenarios/all_towns_traffic_scenarios.json
-#export SAVE_PATH=/home/eidos/Warehouse/Teledriving/TCP_eval_result/results_TCP/
+export SAVE_PATH=/home/csi/jsccc/output_model/TCP_Output
 
 # VAE_TCP
-export PATH_VAE_MODEL=/home/eidos/Warehouse/Teledriving/model/VQVAE/vqvae2_16b_32t_vq_act/vqvae2_model_epoch_30_iter_177690.pth
+export PATH_VAE_MODEL=/home/csi/jsccc/output_model/VAE-CH/svae_ch_1689000631/vae_ch_model_epoch_13_iter_153985.pth
+export PATH_CH_MODEL=/home/csi/jsccc/output_model/VAE-CH/svae_ch_1689000631/channel_model_epoch_13_iter_153985.pth
 #export TCP_PERCEPTION=True
 #export TCP_MEASUREMENT=True
 
