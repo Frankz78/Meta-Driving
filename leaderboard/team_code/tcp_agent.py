@@ -131,9 +131,13 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
             self.ch_manager.to(self.device)
             
             weights = torch.load(PATH_VAE_MODEL, map_location=self.device)
+            channel_weights = torch.load(PATH_CH_MODEL, map_location=self.device)
+            
             self.vae_manager.load_state_dict(weights['model'], strict=False)
             self.vae_manager.eval()
+            self.ch_manager.load_state_dict(channel_weights['model'], strict=False)
             self.norm_manager = NormalizeManager()
+            
         # ====================================================================>
 
     def _init(self):
@@ -359,19 +363,26 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         rgb = rgb.unsqueeze(0) / 255
         rgb = self.norm_manager.norm(rgb)
         # info_show(rgb, '2nd_rgb')
+        
+        # VAE Encoding
         img_mu, img_logvar = self.vae_manager.encode(rgb)
+        # img_z = reparameterize(img_mu, img_logvar)
         
-        # # img_z = reparameterize(img_mu, img_logvar)
-        # ch_mu, ch_logvar = self.ch_manager.encode(img_mu)
-        # # ch_z = reparameterize(ch_mu, ch_logvar)
+        # Channel Encoding
+        ch_mu, ch_logvar = self.ch_manager.encode(img_mu)
+        # ch_z = reparameterize(ch_mu, ch_logvar)
         
-        # # ch_z_rec = self.psnr_add(ch_mu)
+        # Adding noise
+        ch_mu_rec = self.psnr_add(ch_mu)
         # ch_z_rec = ch_mu
         
-        # img_z_rec = self.ch_manager.decode(ch_z_rec)
-        # batch_img_rec = self.vae_manager.decode(img_z_rec)
-        batch_img_rec = self.vae_manager.decode(img_mu)
+        img_mu_rec = self.ch_manager.decode(ch_mu_rec)
+        batch_img_rec = self.vae_manager.decode(img_mu_rec)
+        # batch_img_rec = self.vae_manager.decode(img_mu)
         
+        
+        # For testing purposes
+        # tick_data['rgb'] = self.norm_manager.image_2_rawImage(rgb)
         
         # For saving
         tick_data['rgb'] = self.norm_manager.image_2_rawImage(batch_img_rec)
