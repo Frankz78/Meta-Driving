@@ -136,6 +136,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
             self.vae_manager.load_state_dict(weights['model'], strict=False)
             self.vae_manager.eval()
             self.ch_manager.load_state_dict(channel_weights['model'], strict=False)
+            self.ch_manager.eval()
             self.norm_manager = NormalizeManager()
             
         # ====================================================================>
