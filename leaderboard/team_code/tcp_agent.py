@@ -51,6 +51,8 @@ SAVE_PATH = os.environ.get('SAVE_PATH', None)
 TCP_PERCEPTION = os.environ.get('TCP_PERCEPTION', None)
 TCP_MEASUREMENT = os.environ.get('TCP_MEASUREMENT', None)
 MODEL_TYPE = os.environ.get('MODEL_TYPE', None)
+MODE_NOISE = os.environ.get('MODE_NOISE', None)
+PSNR = int(os.environ.get('PSNR', None))
 
 def get_entry_point():
     return 'TCPAgent'
@@ -374,7 +376,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         # ch_z = reparameterize(ch_mu, ch_logvar)
         
         # Adding noise
-        ch_mu_rec = self.psnr_add(ch_mu)
+        ch_mu_rec = self.psnr_add(ch_mu, psnr=PSNR, mode=MODE_NOISE)
         # ch_z_rec = ch_mu
         
         img_mu_rec = self.ch_manager.decode(ch_mu_rec)
@@ -392,13 +394,27 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         
         return rgb_recon, tick_data
     
-    def psnr_add(self, img_mu, psnr=10):
-        # Obtain the peak power of each sample
-        max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
-        noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
-                                                   torch.tensor(-(psnr/10)).to(self.device)))
-        noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
-        img_mu_noise = img_mu + noise
+    def psnr_add(self, img_mu, psnr=10, mode='AWGN'):
+        if mode=='AWGN':
+            # Obtain the peak power of each sample
+            max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
+            noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
+                                                       torch.tensor(-(self.psnr/10)).to(self.device)))
+            noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
+            img_mu_noise = img_mu + noise
+        elif mode=='Rayleigh':
+            h = (torch.sqrt(torch.Tensor([0.5])) * torch.randn(img_mu.shape) 
+                 + 1j * torch.sqrt(torch.Tensor([0.5])) * torch.randn(img_mu.shape)).to(self.device)
+            max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
+            noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
+                                                       torch.tensor(-(self.psnr/10)).to(self.device)))
+            noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
+            img_mu_noise = torch.abs(h*img_mu) + noise
+        elif mode is None:
+            img_mu_noise = img_mu
+        else:
+            print('The noise mode is invalid!')
+            exit()
         return img_mu_noise
     
     def __simple_process(self, tick_data, quality=0):

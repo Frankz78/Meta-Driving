@@ -29,8 +29,8 @@ export SAVE_PATH=/home/csi/jsccc/output_model/TCP_Output
 export PATH_VAE_MODEL=/home/csi/jsccc/output_model/VAE-CH/svae_ch_1689000631/vae_ch_model_epoch_13_iter_153985.pth
 # export PATH_VAE_MODEL=/home/csi/jsccc/input_model/tcp_carla_brec_1_bkl_1_bpec_200_bact_4096_model_epoch_39_iter_473840.pth
 export PATH_CH_MODEL=/home/csi/jsccc/output_model/VAE-CH/svae_ch_1689000631/channel_model_epoch_13_iter_153985.pth
-#export TCP_PERCEPTION=True
-#export TCP_MEASUREMENT=True
+export MODE_NOISE=AWGN
+export PSNR=10
 
 # JPEG J2K BPG
 # export MODEL_TYPE=BPG
