@@ -399,7 +399,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
             # Obtain the peak power of each sample
             max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
             noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
-                                                       torch.tensor(-(self.psnr/10)).to(self.device)))
+                                                       torch.tensor(-(psnr/10)).to(self.device)))
             noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
             img_mu_noise = img_mu + noise
         elif mode=='Rayleigh':
@@ -407,7 +407,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
                  + 1j * torch.sqrt(torch.Tensor([0.5])) * torch.randn(img_mu.shape)).to(self.device)
             max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
             noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
-                                                       torch.tensor(-(self.psnr/10)).to(self.device)))
+                                                       torch.tensor(-(psnr/10)).to(self.device)))
             noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
             img_mu_noise = torch.abs(h*img_mu) + noise
         elif mode is None:

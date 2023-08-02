@@ -1,5 +1,5 @@
 #!/bin/bash
-export CARLA_ROOT=/home/csi/carla
+export CARLA_ROOT=/home/eidos/Workspace/carla
 export CARLA_SERVER=${CARLA_ROOT}/CarlaUE4.sh
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla
@@ -13,24 +13,24 @@ export CHALLENGE_TRACK_CODENAME=SENSORS
 export PORT=2000
 export TM_PORT=8000
 export DEBUG_CHALLENGE=0
-export REPETITIONS=1 # multiple evaluation runs
+export REPETITIONS=3 # multiple evaluation runs
 export RESUME=False
 
 
 # TCP evaluation
-export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid_1_route_town02.xml
+export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid.xml
 export TEAM_AGENT=team_code/tcp_agent.py
-export TEAM_CONFIG=/home/csi/jsccc/input_data/epoch=59-last.ckpt
+export TEAM_CONFIG=/home/eidos/Warehouse/Teledriving/TCP_agent/epoch=59-last.ckpt
 export CHECKPOINT_ENDPOINT=results_TCP.json
 export SCENARIOS=leaderboard/data/scenarios/all_towns_traffic_scenarios.json
-export SAVE_PATH=/home/csi/jsccc/output_model/TCP_Output
+#export SAVE_PATH=/home/eidos/Warehouse/Teledriving/TCP_eval_result/results_TCP
 
 # VAE_TCP
-export PATH_VAE_MODEL=/home/csi/jsccc/output_model/VAE-CH/svae_ch_1689000631/vae_ch_model_epoch_13_iter_153985.pth
+export PATH_VAE_MODEL=/home/eidos/Warehouse/Teledriving/model_JSCC/VAE_CH/yesMI_AWGN_vae_ch_PSNR12/vae_ch_model_epoch_10_iter_118450.pth
 # export PATH_VAE_MODEL=/home/csi/jsccc/input_model/tcp_carla_brec_1_bkl_1_bpec_200_bact_4096_model_epoch_39_iter_473840.pth
-export PATH_CH_MODEL=/home/csi/jsccc/output_model/VAE-CH/svae_ch_1689000631/channel_model_epoch_13_iter_153985.pth
+export PATH_CH_MODEL=/home/eidos/Warehouse/Teledriving/model_JSCC/VAE_CH/yesMI_AWGN_vae_ch_PSNR12/channel_model_epoch_10_iter_118450.pth
 export MODE_NOISE=AWGN
-export PSNR=10
+export PSNR=12
 
 # JPEG J2K BPG
 # export MODEL_TYPE=BPG
