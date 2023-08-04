@@ -51,8 +51,11 @@ SAVE_PATH = os.environ.get('SAVE_PATH', None)
 TCP_PERCEPTION = os.environ.get('TCP_PERCEPTION', None)
 TCP_MEASUREMENT = os.environ.get('TCP_MEASUREMENT', None)
 MODEL_TYPE = os.environ.get('MODEL_TYPE', None)
+MODE_PRECISION = os.environ.get('MODE_PRECISION', None)
 MODE_NOISE = os.environ.get('MODE_NOISE', None)
 PSNR = int(os.environ.get('PSNR', None))
+QUALITY = int(os.environ.get('QUALITY', None))
+
 
 def get_entry_point():
     return 'TCPAgent'
@@ -127,20 +130,18 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
             self.vae_manager = SoftIntroVAE(cdim=3, zdim=1024, 
                                           channels=[64, 128, 256, 512, 512, 512], 
                                           image_size=(256,900))
-            self.ch_manager = ChannelCodec(1024)
-            
             self.vae_manager.to(self.device)
-            self.ch_manager.to(self.device)
-            
             weights = torch.load(PATH_VAE_MODEL, map_location=self.device)
-            channel_weights = torch.load(PATH_CH_MODEL, map_location=self.device)
-            
             self.vae_manager.load_state_dict(weights['model'], strict=False)
             self.vae_manager.eval()
-            self.ch_manager.load_state_dict(channel_weights['model'], strict=False)
-            self.ch_manager.eval()
             self.norm_manager = NormalizeManager()
             
+            if PATH_CH_MODEL is not None:
+                self.ch_manager = ChannelCodec(1024)
+                self.ch_manager.to(self.device)
+                channel_weights = torch.load(PATH_CH_MODEL, map_location=self.device)
+                self.ch_manager.load_state_dict(channel_weights['model'], strict=False)
+                self.ch_manager.eval()
         # ====================================================================>
 
     def _init(self):
@@ -281,7 +282,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
             if PATH_VAE_MODEL is not None and MODEL_TYPE is None:
                 rgb, tick_data = self.__2nd_process(tick_data, state, rgb)
             elif MODEL_TYPE is not None:
-                rgb, tick_data = self.__simple_process(tick_data, quality=0)
+                rgb, tick_data = self.__simple_process(tick_data, quality=QUALITY)
         # =========================>
         pred= self.net(rgb, state, target_point)
 
@@ -371,21 +372,19 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         img_mu, img_logvar = self.vae_manager.encode(rgb)
         # img_z = reparameterize(img_mu, img_logvar)
         
-        # Channel Encoding
-        ch_mu, ch_logvar = self.ch_manager.encode(img_mu)
-        # ch_z = reparameterize(ch_mu, ch_logvar)
+        if PATH_CH_MODEL is not None:
+            # Channel Encoding
+            ch_mu, ch_logvar = self.ch_manager.encode(img_mu)
+            # Adding noise
+            ch_mu_rec = self.psnr_add(ch_mu, psnr=PSNR, mode=MODE_NOISE)
+            img_mu_rec = self.ch_manager.decode(ch_mu_rec)
+        else:
+            img_mu_rec = img_mu
         
-        # Adding noise
-        ch_mu_rec = self.psnr_add(ch_mu, psnr=PSNR, mode=MODE_NOISE)
-        # ch_z_rec = ch_mu
+        if MODE_PRECISION == 'half':
+            img_mu_rec = img_mu_rec.half().float()
         
-        img_mu_rec = self.ch_manager.decode(ch_mu_rec)
         batch_img_rec = self.vae_manager.decode(img_mu_rec)
-        # batch_img_rec = self.vae_manager.decode(img_mu)
-        
-        
-        # For testing purposes
-        # tick_data['rgb'] = self.norm_manager.image_2_rawImage(rgb)
         
         # For saving
         tick_data['rgb'] = self.norm_manager.image_2_rawImage(batch_img_rec)
