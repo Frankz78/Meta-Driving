@@ -383,6 +383,9 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         
         if MODE_PRECISION == 'half':
             img_mu_rec = img_mu_rec.half().float()
+        elif MODE_PRECISION == 'quantization':
+            img_mu_rec = torch.clip(img_mu_rec, -9.9, 9.9)
+            img_mu_rec = torch.round(img_mu_rec * 10)/10
         
         batch_img_rec = self.vae_manager.decode(img_mu_rec)
         
@@ -394,20 +397,17 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         return rgb_recon, tick_data
     
     def psnr_add(self, img_mu, psnr=10, mode='AWGN'):
+        max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
+        noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
+                                                   torch.tensor(-(psnr/10)).to(self.device)))
+        noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
+        
         if mode=='AWGN':
             # Obtain the peak power of each sample
-            max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
-            noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
-                                                       torch.tensor(-(psnr/10)).to(self.device)))
-            noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
             img_mu_noise = img_mu + noise
         elif mode=='Rayleigh':
             h = (torch.sqrt(torch.Tensor([0.5])) * torch.randn(img_mu.shape) 
                  + 1j * torch.sqrt(torch.Tensor([0.5])) * torch.randn(img_mu.shape)).to(self.device)
-            max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
-            noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
-                                                       torch.tensor(-(psnr/10)).to(self.device)))
-            noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
             img_mu_noise = torch.abs(h*img_mu) + noise
         elif mode is None:
             img_mu_noise = img_mu
