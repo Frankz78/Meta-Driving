@@ -56,7 +56,7 @@ MODE_PRECISION = os.environ.get('MODE_PRECISION', None)
 MODE_NOISE = os.environ.get('MODE_NOISE', None)
 SNR = int(os.environ.get('SNR', None))
 QUALITY = int(os.environ.get('QUALITY', None))
-
+K_RATIO = int(os.environ.get('K_RATIO', None))
 
 def get_entry_point():
     return 'TCPAgent'
@@ -381,7 +381,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
             if MODE_NOISE == 'AWGN':
                 ch_mu_rec = self.channel_phy.awgn(ch_mu, SNR)
             elif MODE_NOISE == 'Rayleigh' or MODE_NOISE == 'Rician':
-                ch_mu_rec = self.channel_phy.fading(ch_mu, SNR, K=self.K)
+                ch_mu_rec = self.channel_phy.fading(ch_mu, SNR, K=K_RATIO)
                 
             img_mu_rec = self.ch_manager.decode(ch_mu_rec)
         else:
