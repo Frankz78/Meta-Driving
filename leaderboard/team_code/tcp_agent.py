@@ -38,6 +38,7 @@ if not top_path_vae_tcp in sys.path:
 from tools.common_tools import info_show
 from models.svae.svae_model import SoftIntroVAE
 from models.channel.channel_network import ChannelCodec
+from models.channel.channel_physical import Channels
 from models.jpeg.jpeg_model import JPEG
 from models.j2k.j2k_model import J2K
 from models.bpg.bpg_model import BPG
@@ -53,7 +54,7 @@ TCP_MEASUREMENT = os.environ.get('TCP_MEASUREMENT', None)
 MODEL_TYPE = os.environ.get('MODEL_TYPE', None)
 MODE_PRECISION = os.environ.get('MODE_PRECISION', None)
 MODE_NOISE = os.environ.get('MODE_NOISE', None)
-PSNR = int(os.environ.get('PSNR', None))
+SNR = int(os.environ.get('SNR', None))
 QUALITY = int(os.environ.get('QUALITY', None))
 
 
@@ -142,6 +143,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
                 channel_weights = torch.load(PATH_CH_MODEL, map_location=self.device)
                 self.ch_manager.load_state_dict(channel_weights['model'], strict=False)
                 self.ch_manager.eval()
+                self.channel_phy = Channels(self.device)
         # ====================================================================>
 
     def _init(self):
@@ -376,7 +378,11 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
             # Channel Encoding
             ch_mu, ch_logvar = self.ch_manager.encode(img_mu)
             # Adding noise
-            ch_mu_rec = self.psnr_add(ch_mu, psnr=PSNR, mode=MODE_NOISE)
+            if MODE_NOISE == 'AWGN':
+                ch_mu_rec = self.channel_phy.awgn(ch_mu, SNR)
+            elif MODE_NOISE == 'Rayleigh' or MODE_NOISE == 'Rician':
+                ch_mu_rec = self.channel_phy.fading(ch_mu, SNR, K=self.K)
+                
             img_mu_rec = self.ch_manager.decode(ch_mu_rec)
         else:
             img_mu_rec = img_mu
@@ -386,6 +392,8 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         elif MODE_PRECISION == 'quantization':
             img_mu_rec = torch.clip(img_mu_rec, -9.9, 9.9)
             img_mu_rec = torch.round(img_mu_rec * 10)/10
+        else:
+            pass
         
         batch_img_rec = self.vae_manager.decode(img_mu_rec)
         
@@ -396,25 +404,25 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         
         return rgb_recon, tick_data
     
-    def psnr_add(self, img_mu, psnr=10, mode='AWGN'):
-        max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
-        noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
-                                                   torch.tensor(-(psnr/10)).to(self.device)))
-        noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
+    # def psnr_add(self, img_mu, psnr=10, mode='AWGN'):
+    #     max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
+    #     noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
+    #                                                torch.tensor(-(psnr/10)).to(self.device)))
+    #     noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
         
-        if mode=='AWGN':
-            # Obtain the peak power of each sample
-            img_mu_noise = img_mu + noise
-        elif mode=='Rayleigh':
-            h = (torch.sqrt(torch.Tensor([0.5])) * torch.randn(img_mu.shape) 
-                 + 1j * torch.sqrt(torch.Tensor([0.5])) * torch.randn(img_mu.shape)).to(self.device)
-            img_mu_noise = torch.abs(h*img_mu) + noise
-        elif mode is None:
-            img_mu_noise = img_mu
-        else:
-            print('The noise mode is invalid!')
-            exit()
-        return img_mu_noise
+    #     if mode=='AWGN':
+    #         # Obtain the peak power of each sample
+    #         img_mu_noise = img_mu + noise
+    #     elif mode=='Rayleigh':
+    #         h = (torch.sqrt(torch.Tensor([0.5])) * torch.randn(img_mu.shape) 
+    #              + 1j * torch.sqrt(torch.Tensor([0.5])) * torch.randn(img_mu.shape)).to(self.device)
+    #         img_mu_noise = torch.abs(h*img_mu) + noise
+    #     elif mode is None:
+    #         img_mu_noise = img_mu
+    #     else:
+    #         print('The noise mode is invalid!')
+    #         exit()
+    #     return img_mu_noise
     
     def __simple_process(self, tick_data, quality=0):
         rgb = tick_data['rgb']
