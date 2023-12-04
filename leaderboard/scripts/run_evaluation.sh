@@ -25,19 +25,20 @@ export CHECKPOINT_ENDPOINT=results_TCP.json
 export SCENARIOS=leaderboard/data/scenarios/all_towns_traffic_scenarios.json
 export SAVE_PATH=/home/eidos/Warehouse/Teledriving/TCP_eval_result/results_TCP
 
-# VAE_TCP
+# export CUDA_VISIBLE_DEVICES=-1
+# JPEG | J2K | BPG | JSCC
+export MODEL_TYPE=J2K
+export QUALITY=51
+
 export PATH_VAE_MODEL=/home/eidos/Warehouse/Teledriving/model_JSCC_TWC/VAE/Overall_Rayleigh_yesMI_PSNR_-18/vae_ch_model_epoch_20_iter_236900.pth
-# export PATH_VAE_MODEL=/home/csi/jsccc/input_model/tcp_carla_brec_1_bkl_1_bpec_200_bact_4096_model_epoch_39_iter_473840.pth
-export PATH_CH_MODEL=/home/eidos/Warehouse/Teledriving/model_JSCC_TWC/VAE/Overall_Rayleigh_yesMI_PSNR_-18/channel_model_epoch_20_iter_236900.pth
+#export PATH_CH_MODEL=/home/eidos/Warehouse/Teledriving/model_JSCC_TWC/VAE/Overall_Rayleigh_yesMI_PSNR_-18/channel_model_epoch_20_iter_236900.pth
 # half quantization
 #export MODE_PRECISION=quantization 
 export MODE_NOISE=Rayleigh
 export SNR=0
 export K_RATIO=0
 
-# JPEG | J2K | BPG | JSCC
-# export MODEL_TYPE=BPG
-export QUALITY=51
+
 # Gym
 #export FIFO_PATH=/home/eidos/Workspace/GitKraken_ws/meta_driving/fifo_space
 
