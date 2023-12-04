@@ -21,9 +21,13 @@ import importlib
 import os
 import sys
 import gc
+print('start to import pkg_resources')
 import pkg_resources
+print('finish to import pkg_resources')
 import sys
+print('start to import carla')
 import carla
+print('finish to import carla')
 import copy
 import signal
 
@@ -38,6 +42,7 @@ from leaderboard.autoagents.agent_wrapper import  AgentWrapper, AgentError
 from leaderboard.utils.statistics_manager import StatisticsManager
 from leaderboard.utils.route_indexer import RouteIndexer
 
+print('finish import')
 
 sensors_to_icons = {
     'sensor.camera.rgb':        'carla_camera',
@@ -526,4 +531,5 @@ def main():
 
 
 if __name__ == '__main__':
+    print('leaderboard ready to start!')
     main()

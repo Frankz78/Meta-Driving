@@ -35,7 +35,7 @@ export MODE_NOISE=Rayleigh
 export SNR=0
 export K_RATIO=0
 
-# JPEG J2K BPG
+# JPEG | J2K | BPG | JSCC
 # export MODEL_TYPE=BPG
 export QUALITY=51
 # Gym

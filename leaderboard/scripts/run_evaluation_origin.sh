@@ -1,5 +1,5 @@
 #!/bin/bash
-export CARLA_ROOT=/home/eidos/Workspace/CARLA/world_on_rails/CARLA_0.9.10.1
+export CARLA_ROOT=/home/eidos/Workspace/carla
 export CARLA_SERVER=${CARLA_ROOT}/CarlaUE4.sh
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla
@@ -13,17 +13,17 @@ export CHALLENGE_TRACK_CODENAME=SENSORS
 export PORT=2000
 export TM_PORT=8000
 export DEBUG_CHALLENGE=0
-export REPETITIONS=3 # multiple evaluation runs
+export REPETITIONS=1 # multiple evaluation runs
 export RESUME=False
 
 
 # TCP evaluation
-export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid.xml
+export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid_1_route_town02.xml
 export TEAM_AGENT=team_code/tcp_agent.py
-export TEAM_CONFIG=/home/eidos/Workspace/GitKraken_ws/TCP/log/TCP/epoch=59-last.ckpt
+export TEAM_CONFIG=/home/eidos/Warehouse/Teledriving/TCP_agent/epoch=59-last.ckpt
 export CHECKPOINT_ENDPOINT=results_TCP.json
 export SCENARIOS=leaderboard/data/scenarios/all_towns_traffic_scenarios.json
-export SAVE_PATH=data/results_TCP/
+export SAVE_PATH=/home/eidos/Warehouse/Teledriving/TCP_eval_result/results_TCP
 
 
 python3 ${LEADERBOARD_ROOT}/leaderboard/leaderboard_evaluator.py \
