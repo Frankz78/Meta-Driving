@@ -382,8 +382,6 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         torch.cuda.empty_cache()
     
     def __2nd_process(self, tick_data, state, rgb_tcp):
-        o_cond = None
-        
         # Change the channel from H*W*C to C*H*W
         rgb = torch.tensor(tick_data['rgb']).to(self.device, dtype=torch.float32).permute(2, 0, 1)
         # Change range to [0, 1]
@@ -395,29 +393,21 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         img_mu, img_logvar = self.codec.encode(rgb)
         # img_z = reparameterize(img_mu, img_logvar)
         
-        if PATH_CH_MODEL is not None:
-            # Channel Encoding
-            ch_mu, ch_logvar = self.ch_manager.encode(img_mu)
-            # Adding noise
-            if MODE_NOISE == 'AWGN':
-                ch_mu_rec = self.channel_phy.awgn(ch_mu, SNR)
-            elif MODE_NOISE == 'Rayleigh' or MODE_NOISE == 'Rician':
-                ch_mu_rec = self.channel_phy.fading(ch_mu, SNR, K=K_RATIO)
-                
-            img_mu_rec = self.ch_manager.decode(ch_mu_rec)
+        # Channel Encoding
+        # ch_mu, ch_logvar = self.ch_manager.encode(img_mu)
+        ch_mu, ch_logvar = img_mu, img_logvar
+        # Adding noise
+        if MODE_NOISE == 'AWGN':
+            ch_mu_rec = self.channel_phy.awgn(ch_mu, SNR)
+        elif MODE_NOISE == 'Rayleigh' or MODE_NOISE == 'Rician':
+            ch_mu_rec = self.channel_phy.fading(ch_mu, SNR, K=K_RATIO)
         else:
-            img_mu_rec = img_mu
+            ch_mu_rec = ch_mu
         
-        if MODE_PRECISION == 'half':
-            img_mu_rec = img_mu_rec.half().float()
-        elif MODE_PRECISION == 'quantization':
-            img_mu_rec = torch.clip(img_mu_rec, -9.9, 9.9)
-            img_mu_rec = torch.round(img_mu_rec * 10)/10
-        else:
-            pass
+        # img_mu_rec = self.ch_manager.decode(ch_mu_rec)
+        img_mu_rec = ch_mu_rec
         
         batch_img_rec = self.codec.decode(img_mu_rec)
-        
         # For saving
         tick_data['rgb'] = self.norm_manager.image_2_rawImage(batch_img_rec)
         # info_show(rgb_recon, '2nd_rgb_recon')

@@ -27,15 +27,13 @@ export SAVE_PATH=/home/eidos/Warehouse/Teledriving/TCP_eval_result/results_TCP
 
 # export CUDA_VISIBLE_DEVICES=-1
 # JPEG | J2K | BPG | JSCC
-export MODEL_TYPE=J2K
+export MODEL_TYPE=JSCC
 export QUALITY=51
 
-export PATH_VAE_MODEL=/home/eidos/Warehouse/Teledriving/model_JSCC_TWC/VAE/Overall_Rayleigh_yesMI_PSNR_-18/vae_ch_model_epoch_20_iter_236900.pth
+export PATH_VAE_MODEL=/home/eidos/Warehouse/Teledriving/model/SVAE/svae_20230710/svae_model_epoch_10_iter_118460.pth
 #export PATH_CH_MODEL=/home/eidos/Warehouse/Teledriving/model_JSCC_TWC/VAE/Overall_Rayleigh_yesMI_PSNR_-18/channel_model_epoch_20_iter_236900.pth
-# half quantization
-#export MODE_PRECISION=quantization 
-export MODE_NOISE=Rayleigh
-export SNR=0
+export MODE_NOISE=AWGN
+export SNR=10
 export K_RATIO=0
 
 
