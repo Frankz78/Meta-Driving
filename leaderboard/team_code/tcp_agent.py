@@ -9,6 +9,7 @@ from collections import deque
 import math
 from collections import OrderedDict
 import yaml
+import copy
 
 import torch
 import carla
@@ -158,6 +159,8 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
             print('The MODEL_TYPE is invalid.')
             exit()
         
+        self.img_last = None
+
         # if PATH_CH_MODEL is not None:
         #     self.ch_manager = ChannelCodec(1024)
         #     self.ch_manager.to(self.device)
@@ -437,6 +440,8 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
     
     def __simple_process(self, tick_data: Dict, quality: int = 1):
         rgb = tick_data['rgb']
+        if self.img_last is None:
+            self.img_last = copy.deepcopy(rgb)
         # source encoding
         bits_tensor, bits_length = self.codec.encode(rgb, quality)
         # channel coding -> modulation -> channel -> demodulation -> channel decoding
@@ -444,10 +449,15 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         bits_tensor = self.tradicom.e2e_com(bits_tensor)
         # source decoding
         rgb_recon = self.codec.decode(bits_tensor, bits_length)
-
+        # Use last image
+        if rgb_recon is None:
+            rgb_recon = self.img_last
+        
         tick_data['rgb'] = rgb_recon
         rgb_recon = self._im_transform(tick_data['rgb']).unsqueeze(0).to('cuda', dtype=torch.float32)
-        
+        # Update the last image
+        self.img_last = copy.deepcopy(rgb_recon)
+
         return rgb_recon, tick_data
         
         
