@@ -453,11 +453,12 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         if rgb_recon is None:
             rgb_recon = self.img_last
         
-        tick_data['rgb'] = rgb_recon
-        rgb_recon = self._im_transform(tick_data['rgb']).unsqueeze(0).to('cuda', dtype=torch.float32)
         # Update the last image
         self.img_last = copy.deepcopy(rgb_recon)
 
+        tick_data['rgb'] = rgb_recon
+        rgb_recon = self._im_transform(tick_data['rgb']).unsqueeze(0).to('cuda', dtype=torch.float32)
+        
         return rgb_recon, tick_data
         
         

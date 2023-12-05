@@ -3,7 +3,7 @@ tradicom:
   n_ldpc: 6144
   k_ldpc: 2048
   num_bits_per_symbol: 6
-  ebno_db: 10
+  ebno_db: 3
   demapping_method: 'app'
   ldpc_cn_type: 'boxplus'
 jscc:
