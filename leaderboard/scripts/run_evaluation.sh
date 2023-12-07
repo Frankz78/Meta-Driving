@@ -13,7 +13,7 @@ export CHALLENGE_TRACK_CODENAME=SENSORS
 export PORT=2000
 export TM_PORT=8000
 export DEBUG_CHALLENGE=0
-export REPETITIONS=1 # multiple evaluation runs
+export REPETITIONS=3 # multiple evaluation runs
 export RESUME=False
 
 
@@ -36,6 +36,8 @@ export MODE_NOISE=AWGN
 export SNR=10
 export K_RATIO=0
 
+# Log
+export USE_WANDB=True
 
 # Gym
 #export FIFO_PATH=/home/eidos/Workspace/GitKraken_ws/meta_driving/fifo_space

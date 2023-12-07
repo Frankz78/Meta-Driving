@@ -1,0 +1,4599 @@
+init statistics_manager
+begin
+dic_path
+{'rootPath_TCP_JSCC': '/home/eidos/Workspace/Git_ws/TCP_JSCC', 'wandb_project': 'wandb_test', 'wandb_entity': 'eidos1970', 'wandb_name': 'test_20231207'}
+['team_code', '/home/eidos/Workspace/Git_ws/TCP/leaderboard/leaderboard', '/opt/ros/noetic/lib/python3/dist-packages', '/home/eidos/Workspace/Git_ws/TCP', '/home/eidos/Workspace/carla/PythonAPI', '/home/eidos/Workspace/carla/PythonAPI/carla', '/home/eidos/Workspace/carla/PythonAPI/carla/dist/carla-0.9.10-py3.7-linux-x86_64.egg', '/home/eidos/Workspace/Git_ws/TCP/leaderboard', '/home/eidos/Workspace/Git_ws/TCP/leaderboard/team_code', '/home/eidos/Workspace/Git_ws/TCP/scenario_runner', '/home/eidos/anaconda3/envs/jscc/lib/python38.zip', '/home/eidos/anaconda3/envs/jscc/lib/python3.8', '/home/eidos/anaconda3/envs/jscc/lib/python3.8/lib-dynload', '/home/eidos/.local/lib/python3.8/site-packages', '/home/eidos/anaconda3/envs/jscc/lib/python3.8/site-packages', '/home/eidos/Workspace/Git_ws/TCP_JSCC']
+[1m========= Preparing RouteScenario_0 (repetition 0) =========
+[1m> Setting up the agent
+routes_lav_valid_1_route_town02_12_07_11_48_45
+[1m> Loading the world
+Town02
+ Base transform is blocking objects  Transform(Location(x=185.695465, y=257.345886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+ Base transform is blocking objects  Transform(Location(x=185.695114, y=257.845886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+ Base transform is blocking objects  Transform(Location(x=185.694778, y=258.345886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+ Base transform is blocking objects  Transform(Location(x=185.694443, y=258.845886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+ Base transform is blocking objects  Transform(Location(x=185.694092, y=259.345886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+ Base transform is blocking objects  Transform(Location(x=185.693756, y=259.845886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+Skipping scenario 'Scenario4' due to setup error: Error: Unable to spawn vehicle vehicle.diamondback.century at Transform(Location(x=185.693756, y=259.845886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+[1m> Running the route
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.6489331025577718e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.7818597320422445e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.6954691215929453e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.1652090494484384e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -2.9655240149269688e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.300769779607622e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.320600579812646e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -6.356028045721949e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -6.1258371684128576e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.8816496778673988e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.810074901877489e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -3.72168499233795e-11
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.3573112618473324e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -2.5925936853603466e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -3.918189265791752e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.549154752931865e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.5866761663389175e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -6.184712009226601e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.4913173617108112e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -8.687376882845882e-10
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -3.4486341727062302e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -6.40238350669304e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -8.361621422339674e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.4503224543674358e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.2652688899795064e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.2717500292057588e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.3156399884499839e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.302781476661142e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -3.1923446596931712e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.7115336366968e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -5.284856976760957e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.8370991958361323e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.6268642772057333e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -9.60116464077953e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.2113337355254431e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.9271885646415723e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.7323435732338285e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -5.646404146687115e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.782291839790604e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -5.368589644254483e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.789390532207281e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -7.415855390980094e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  3.742426457536389e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.0055827506366065e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -3.8120885920955206e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.719325379073326e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.5131090221789814e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.3071191061685598e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.3059966852064682e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.1980868195942088e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.1643323039000404e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.108527719613107e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.8218353524751825e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.066215980411503e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.8764197748674858e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.9553429635467408e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -2.0427742061555022e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -2.0601222590142752e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -2.147810872231977e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.964131065053518e-10
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -2.0088733303885404e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.7839577358402195e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -8.25391102432981e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.4515227263641436e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.2453096502804524e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.1526202897131867e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.0577407212695606e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.0499733936295854e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.9834924423001435e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  3.002091087437765e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  8.788155091174187e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  8.541690890929267e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  9.521919092198539e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  9.34311653707559e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  3.274839819980374e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -7.077936825345916e-10
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.087419377763581e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -5.022479166772535e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.6005047925796452e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -9.93342698471125e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.0826498935653704e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.109107504396479e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.0824454757921088e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -2.0602090916006393e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.103579053747182e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0004134043396136097
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.2831854820251465
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.4561162 ]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.07433959672445659, -51.99733120520568)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.18468651519999985
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.2831854820251465
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24131487   -3.45601821]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.07424160782223578, -51.99084592092451)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.31606762115818837
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.2831854820251465
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.2266505    -3.45582366]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.07404706082542307, -51.97618155233691)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.39955069717484987
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.2831854820251465
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.20780503   -3.45551801]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.07374141150164566, -51.95733608151332)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.4762530637726941
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.18509891   -3.4551816 ]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.07341408739559714, -51.93462994599618)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.7024840997638181
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.00048828125
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.15461045   -3.45483852]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.04772717627145512, -51.90417097716398)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.8602770838978174
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.000845727976411581
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.11453903   -3.45436907]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.02873864111884361, -51.86411291581848)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.065802072734197
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0011451210593804717
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.06412167   -3.45379043]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.012689975851738866, -51.81370121028097)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.2182822537256979
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0016558425268158317
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.00564731   -3.45310879]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.014357207656073054, -51.75522552020614)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.4719576574482651
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.002128368942067027
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-178.93588092   -3.45235658]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.03941663673953766, -51.6854451260555)
+----------End of Information target_point----------
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.6767576333963983
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0027404725551605225
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-178.85524977   -3.45152283]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.07166625455595517, -51.604778186485994)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.854330796113531
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0033652479760348797
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-178.76540189   -3.4504695 ]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.10465860297809314, -51.51487242413921)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.0141809103959964
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0039517637342214584
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-178.66728337   -3.44932485]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.13562976615342015, -51.41667989958368)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.162222082517408
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.004554388113319874
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-178.56162666   -3.44811798]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.16734034677699167, -51.31092771773867)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.30228995537495
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.005121142603456974
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-178.44884376   -3.44683862]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.19712277958903957, -51.19803667027844)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.436876317750681
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.005673322826623917
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-178.32923988   -3.44548679]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.22606655520553098, -51.07831039024764)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.5675936711720033
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.006205217447131872
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-178.20304389   -3.44404889]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.25388960673369576, -50.95198044336615)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.695511296428986
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.006739355623722076
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-178.07042366   -3.44252396]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.2817360896237417, -50.819210067270255)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.8213354870067207
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.007250622380524874
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-177.93147075   -3.44090868]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.3083259814918777, -50.68009840587351)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.9455408248444157
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.007751244120299816
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-177.78629195   -3.43920422]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.3342765990599826, -50.53475005776915)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  3.068446326032173
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.008221438154578209
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-177.63494833   -3.43740583]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.35859178156667854, -50.38323400159521)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  3.1902717622678693
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.008693628013134003
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-177.47747039   -3.43550802]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.3829108956472079, -50.22557057537516)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  3.311168255404117
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.009147978387773037
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-177.31394969   -3.43350482]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (-0.4062381082612679, -50.061859232145835)
+----------End of Information target_point----------
+Image is broken
+[1m> Stopping the route
+[1m========= Results of RouteScenario_0 (repetition 0) ------ [91mFAILURE[39m[22m [1m=========
+╒═════════════════════════════════╤═════════════════════╕
+│ Start Time                      │ 2023-12-07 11:48:47 │
+├─────────────────────────────────┼─────────────────────┤
+│ End Time                        │ 2023-12-07 11:49:20 │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (System Time)          │ 33.27s              │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (Game Time)            │ 5.6s                │
+├─────────────────────────────────┼─────────────────────┤
+│ Ratio (System Time / Game Time) │ 0.168               │
+╘═════════════════════════════════╧═════════════════════╛
+╒═══════════════════════╤═════════╤═════════╕
+│ Criterion             │ Result  │ Value   │
+├───────────────────────┼─────────┼─────────┤
+│ RouteCompletionTest   │ [91mFAILURE[39m │ 0.11 %  │
+├───────────────────────┼─────────┼─────────┤
+│ OutsideRouteLanesTest │ [92mSUCCESS[39m │ 0 %     │
+├───────────────────────┼─────────┼─────────┤
+│ CollisionTest         │ [92mSUCCESS[39m │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningRedLightTest   │ [92mSUCCESS[39m │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningStopTest       │ [92mSUCCESS[39m │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ [92mSUCCESS[39m │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ [92mSUCCESS[39m │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ [92mSUCCESS[39m │         │
+╘═══════════════════════╧═════════╧═════════╛
+[1m> Registering the route statistics
+[1m========= Preparing RouteScenario_0 (repetition 1) =========
+[1m> Setting up the agent
+routes_lav_valid_1_route_town02_12_07_11_49_20
+[1m> Loading the world
+Town02
+ Base transform is blocking objects  Transform(Location(x=185.695465, y=257.345886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+ Base transform is blocking objects  Transform(Location(x=185.695114, y=257.845886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+ Base transform is blocking objects  Transform(Location(x=185.694778, y=258.345886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+ Base transform is blocking objects  Transform(Location(x=185.694443, y=258.845886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+ Base transform is blocking objects  Transform(Location(x=185.694092, y=259.345886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+ Base transform is blocking objects  Transform(Location(x=185.693756, y=259.845886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+Skipping scenario 'Scenario4' due to setup error: Error: Unable to spawn vehicle vehicle.diamondback.century at Transform(Location(x=185.693756, y=259.845886, z=1.210000), Rotation(pitch=0.000000, yaw=360.039185, roll=0.000000))
+[1m> Running the route
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -8.90997109662258e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.6489331025577718e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.7818597320422445e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.6954691215929453e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.165984794460261e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -2.963416234038017e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.297731108900388e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.331187551395007e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -6.35348518682015e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -6.123658240247718e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.8859941571729424e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.811057947807333e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -2.48881438050617e-11
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -2.5476756413320053e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -3.9217851274709184e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.610600326776689e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -6.30999843738096e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.495027828618502e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -8.697021824277411e-10
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -3.472285243288388e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -6.456107380897718e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+content:  [-179.24780016   -3.45611668]-------
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.2637462581574115e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -1.3167970262850455e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0005347980475138756
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.4561162 ]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229063592156969, -51.99730244231925)
+----------End of Information target_point----------
+content:  [-179.24780016   -3.45611668]-------
+content:  [-179.24780016   -3.45611668]-------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.6954691215929453e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  0.0
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  2.1659337894595568e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -6.3536529930343886e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -6.123802495409681e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  1.8814510245199074e-08
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+Image is broken
+----------Start of Information speed----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  -4.8103229420653784e-09
+----------End of Information speed----------
+----------Start of Information compass----------
+type: <class 'numpy.float64'>
+len: None
+shape:  ()
+content:  6.282840251922607
+----------End of Information compass----------
+----------Start of Information pos----------
+type: <class 'numpy.ndarray'>
+len:  2
+shape:  (2,)
+content:  [-179.24780016   -3.45611668]
+----------End of Information pos----------
+----------Start of Information next_cmd----------
+type: <enum 'RoadOption'>
+len: None
+shape: None
+content:  RoadOption.LANEFOLLOW
+----------End of Information next_cmd----------
+----------Start of Information target_point----------
+type: <class 'tuple'>
+len:  2
+shape: None
+content:  (0.09229111275870083, -51.99730244215472)
+----------End of Information target_point----------
+├───────────────────────┼─────────┼─────────┤--
+│ RunningStopTest       │ [92mSUCCESS[39m │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ [92mSUCCESS[39m │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ [92mSUCCESS[39m │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ [92mSUCCESS[39m │         │
+╘═══════════════════════╧═════════╧═════════╛
+[1m> Registering the route statistics
+[1m> Registering the global statistics
+├───────────────────────┼─────────┼─────────┤--

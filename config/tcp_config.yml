@@ -1,2 +1,5 @@
 # yaml, general config
 rootPath_TCP_JSCC: '/home/eidos/Workspace/Git_ws/TCP_JSCC'
+wandb_project: 'wandb_test'
+wandb_entity: 'eidos1970'
+wandb_name: 'test_20231207'

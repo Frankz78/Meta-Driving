@@ -21,13 +21,9 @@ import importlib
 import os
 import sys
 import gc
-print('start to import pkg_resources')
 import pkg_resources
-print('finish to import pkg_resources')
 import sys
-print('start to import carla')
 import carla
-print('finish to import carla')
 import copy
 import signal
 
@@ -41,8 +37,17 @@ from leaderboard.envs.sensor_interface import SensorInterface, SensorConfigurati
 from leaderboard.autoagents.agent_wrapper import  AgentWrapper, AgentError
 from leaderboard.utils.statistics_manager import StatisticsManager
 from leaderboard.utils.route_indexer import RouteIndexer
-
-print('finish import')
+# <========================================================================
+USE_WANDB = os.environ.get('USE_WANDB', None)
+if USE_WANDB == 'True':
+    import wandb
+    import yaml
+    import time
+    with open('./config/tcp_config.yml') as f:
+        content = f.read()
+        dic_config = yaml.safe_load(content)
+        print('TCP config:', dic_config)
+# ========================================================================>
 
 sensors_to_icons = {
     'sensor.camera.rgb':        'carla_camera',
@@ -532,4 +537,21 @@ def main():
 
 if __name__ == '__main__':
     print('leaderboard ready to start!')
+
+    if USE_WANDB == 'True':
+        wandb.init(project=dic_config['wandb_project'],
+                    entity=dic_config['wandb_entity'],
+                    name = dic_config['wandb_name'])
+        start_time = time.time()
+        wandb.log({"Training Start Time": start_time})
+
+    # run TCP
     main()
+
+    if USE_WANDB == 'True':
+        end_time = time.time()
+        wandb.log({"Training End Time": end_time})
+        total_time = end_time - start_time
+        wandb.log({"Total Training Time": total_time})
+        wandb.finish()
+        print('leaderboard finished!')

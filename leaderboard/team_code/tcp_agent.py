@@ -23,6 +23,7 @@ from TCP.model import TCP
 from TCP.config import GlobalConfig
 from team_code.planner import RoutePlanner
 
+# <========================================================================
 import sys
 top_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 if not top_path in sys.path:
@@ -68,6 +69,10 @@ MODE_NOISE = os.environ.get('MODE_NOISE', None)
 SNR = int(os.environ.get('SNR', None))
 QUALITY = int(os.environ.get('QUALITY', None))
 K_RATIO = int(os.environ.get('K_RATIO', None))
+USE_WANDB = os.environ.get('USE_WANDB', None)
+if USE_WANDB == 'True':
+    import wandb
+# ========================================================================>
 
 def get_entry_point():
     return 'TCPAgent'
@@ -383,6 +388,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         if PATH_VAE_MODEL is not None:
             del self.codec
         torch.cuda.empty_cache()
+        wandb.log({'Time': time.time()})
     
     def __2nd_process(self, tick_data, state, rgb_tcp):
         # Change the channel from H*W*C to C*H*W
