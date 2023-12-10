@@ -7,3 +7,5 @@ results_TCP.json
 leaderboard/scripts/run_evaluation.sh
 
 config/
+
+wandb/
