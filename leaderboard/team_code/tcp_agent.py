@@ -458,6 +458,10 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         # Use last image
         if rgb_recon is None:
             rgb_recon = self.img_last
+        elif rgb_recon.shape != self.img_last.shape:
+            rgb_recon = self.img_last
+        else:
+            pass
         
         # Update the last image
         self.img_last = copy.deepcopy(rgb_recon)
