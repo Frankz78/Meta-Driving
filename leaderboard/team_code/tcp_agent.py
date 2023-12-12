@@ -54,6 +54,7 @@ from models.tradicom.tradicom_model import TradiCom
 from models.bpg.bpg_model import BPG
 from tools.dataset_tcp import NormalizeManager
 from tools.common_tools import reparameterize
+from models.ae_ch.ae_model import AE
 # from pythae_ex.models import AutoModel_Ex
 # typing
 from typing import Dict, List, Tuple, Union, Callable, Iterable, Any
@@ -67,6 +68,7 @@ MODEL_TYPE = os.environ.get('MODEL_TYPE', None)
 MODE_PRECISION = os.environ.get('MODE_PRECISION', None)
 MODE_NOISE = os.environ.get('MODE_NOISE', None)
 SNR = int(os.environ.get('SNR', None))
+print('SNR: ', SNR)
 QUALITY = int(os.environ.get('QUALITY', None))
 K_RATIO = int(os.environ.get('K_RATIO', None))
 USE_WANDB = os.environ.get('USE_WANDB', None)
@@ -148,6 +150,16 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
                 self.codec.load_state_dict(weights['model'], strict=False)
                 self.codec.eval()
                 self.norm_manager = NormalizeManager()
+            elif MODEL_TYPE == 'AE':
+                self.device = torch.device('cuda:0')
+                self.codec = AE(cdim=3, zdim=1024, 
+                                channels=[64, 128, 256, 512, 512, 512], 
+                                image_size=(256,900))
+                self.codec.to(self.device)
+                weights = torch.load(PATH_VAE_MODEL, map_location=self.device)
+                self.codec.load_state_dict(weights['model'], strict=False)
+                self.codec.eval()
+                self.norm_manager = NormalizeManager()
             elif MODEL_TYPE == 'ORIGIN':
                 pass
             else:
@@ -156,7 +168,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         # Build the channel codec, modulator, and channel physical model
         if MODEL_TYPE in ['JPEG', 'J2K', 'BPG']:
             self.tradicom = TradiCom(com_params['tradicom'])
-        elif MODEL_TYPE == 'JSCC':
+        elif MODEL_TYPE == 'JSCC' or MODEL_TYPE == 'AE':
             self.channel_phy = Channels(self.device)
         elif MODEL_TYPE == 'ORIGIN':
             pass
@@ -310,7 +322,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         
         # <=========================
         with torch.no_grad():
-            if MODEL_TYPE == 'JSCC':
+            if MODEL_TYPE == 'JSCC' or MODEL_TYPE == 'AE':
                 rgb, tick_data = self.__2nd_process(tick_data, state, rgb)
             elif MODEL_TYPE in ['JPEG', 'J2K', 'BPG']:
                 rgb, tick_data = self.__simple_process(tick_data, quality=QUALITY)
@@ -411,6 +423,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         elif MODE_NOISE == 'Rayleigh' or MODE_NOISE == 'Rician':
             ch_mu_rec = self.channel_phy.fading(ch_mu, SNR, K=K_RATIO)
         else:
+            exit()
             ch_mu_rec = ch_mu
         
         # img_mu_rec = self.ch_manager.decode(ch_mu_rec)
