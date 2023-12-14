@@ -28,7 +28,7 @@ export SAVE_PATH=/home/eidos/Warehouse/Teledriving/TCP_eval_result/results_TCP
 
 # export CUDA_VISIBLE_DEVICES=-1
 # JPEG | J2K | BPG | JSCC | AE
-export MODEL_TYPE=J2K
+export MODEL_TYPE=JPEG
 export QUALITY=0
 
 export PATH_VAE_MODEL=/home/eidos/Warehouse/Teledriving/model_Infocom2024/VAE/ae_awgnSNR_6/ae_model_epoch_20_iter_236920.pth
