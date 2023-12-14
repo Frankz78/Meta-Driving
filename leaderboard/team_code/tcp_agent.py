@@ -275,11 +275,13 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         # info_show(rgb, 'rgb', False) # (256, 900, 3) [0~255]
         # info_show(bev, 'bev', False) # (512, 512, 3)
         # info_show(gps, 'gps') # (2,)
-        info_show(speed, 'speed') # numpy.float64
-        info_show(compass, 'compass') # numpy.float64
-        info_show(pos, 'pos') # (2,)
-        info_show(next_cmd, 'next_cmd') # RoadOption
-        info_show(result['target_point'], 'target_point') # tuple len=2
+
+        # info_show(speed, 'speed') # numpy.float64
+        # info_show(compass, 'compass') # numpy.float64
+        # info_show(pos, 'pos') # (2,)
+        # info_show(next_cmd, 'next_cmd') # RoadOption
+        # info_show(result['target_point'], 'target_point') # tuple len=2
+
         # info_show(input_data['rgb'][1], 'input_data', True) # (256, 900, 4) [0~255]
         # =========================>
 
@@ -458,16 +460,22 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
     #     return img_mu_noise
     
     def __simple_process(self, tick_data: Dict, quality: int = 1):
+        # tick_data['rgb'], rgb, and self.img_last are similar
         rgb = tick_data['rgb']
-        if self.img_last is None:
-            self.img_last = copy.deepcopy(rgb)
+        
         # source encoding
         bits_tensor, bits_length = self.codec.encode(rgb, quality)
         # channel coding -> modulation -> channel -> demodulation -> channel decoding
         bits_tensor = self.tradicom.padding_bits(bits_tensor)
-        bits_tensor = self.tradicom.e2e_com(bits_tensor)
+        if self.img_last is None:
+            bits_tensor = self.tradicom.e2e_com(bits_tensor, 30)
+        else:
+            bits_tensor = self.tradicom.e2e_com(bits_tensor, com_params['tradicom']['ebno_db'])
         # source decoding
         rgb_recon = self.codec.decode(bits_tensor, bits_length)
+        # initialize the last image
+        if self.img_last is None:
+            self.img_last = copy.deepcopy(rgb_recon)
         # Use last image
         if rgb_recon is None:
             rgb_recon = self.img_last
@@ -476,13 +484,20 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         else:
             pass
         
+        tick_data['rgb'] = rgb_recon
+        
+        try:
+            rgb_recon_trans = self._im_transform(tick_data['rgb']).unsqueeze(0).to('cuda', dtype=torch.float32)
+        except TypeError:
+            print('The rgb_recon is invalid!')
+            rgb_recon = self.img_last
+            tick_data['rgb'] = rgb_recon
+            rgb_recon_trans = self._im_transform(tick_data['rgb']).unsqueeze(0).to('cuda', dtype=torch.float32)
+
         # Update the last image
         self.img_last = copy.deepcopy(rgb_recon)
 
-        tick_data['rgb'] = rgb_recon
-        rgb_recon = self._im_transform(tick_data['rgb']).unsqueeze(0).to('cuda', dtype=torch.float32)
-        
-        return rgb_recon, tick_data
+        return rgb_recon_trans, tick_data
         
         
         
