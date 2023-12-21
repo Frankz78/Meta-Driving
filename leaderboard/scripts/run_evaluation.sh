@@ -18,7 +18,7 @@ export RESUME=True
 
 
 # TCP evaluation
-export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid_1_route_town02.xml
+export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid_town05_second.xml
 # export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid.xml
 export TEAM_AGENT=team_code/tcp_agent.py
 export TEAM_CONFIG=/home/eidos/Warehouse/Teledriving/TCP_agent/epoch=59-last.ckpt
@@ -28,11 +28,11 @@ export SAVE_PATH=/home/eidos/Warehouse/Teledriving/TCP_eval_result/results_TCP
 
 # export CUDA_VISIBLE_DEVICES=-1
 # JPEG | J2K | BPG | JSCC | AE
-export MODEL_TYPE=JPEG
-export QUALITY=0
+export MODEL_TYPE=BPG
+export QUALITY=51
 
 export PATH_VAE_MODEL=/home/eidos/Warehouse/Teledriving/model_Infocom2024/VAE/ae_awgnSNR_6/ae_model_epoch_20_iter_236920.pth
-#export PATH_CH_MODEL=/home/eidos/Warehouse/Teledriving/model_JSCC_TWC/VAE/Overall_Rayleigh_yesMI_PSNR_-18/channel_model_epoch_20_iter_236900.pth
+# export PATH_CH_MODEL=/home/eidos/Warehouse/Teledriving/model_JSCC_TWC/VAE/Overall_Rayleigh_yesMI_PSNR_-18/channel_model_epoch_20_iter_236900.pth
 export MODE_NOISE=AWGN
 export SNR=4
 export K_RATIO=0
@@ -41,7 +41,7 @@ export K_RATIO=0
 export USE_WANDB=True
 
 # Gym
-#export FIFO_PATH=/home/eidos/Workspace/GitKraken_ws/meta_driving/fifo_space
+# export FIFO_PATH=/home/eidos/Workspace/GitKraken_ws/meta_driving/fifo_space
 
 python3 ${LEADERBOARD_ROOT}/leaderboard/leaderboard_evaluator.py \
 --scenarios=${SCENARIOS}  \
