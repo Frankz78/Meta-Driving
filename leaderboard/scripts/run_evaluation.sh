@@ -13,33 +13,28 @@ export CHALLENGE_TRACK_CODENAME=SENSORS
 export PORT=2000
 export TM_PORT=8000
 export DEBUG_CHALLENGE=0
-export REPETITIONS=1 # multiple evaluation runs
+export REPETITIONS=3 # multiple evaluation runs
 export RESUME=True
 
-
 # TCP evaluation
+# export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid_1_route_town02_00.xml
 export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid_town05_second.xml
 # export ROUTES=leaderboard/data/evaluation_routes/routes_lav_valid.xml
 export TEAM_AGENT=team_code/tcp_agent.py
 export TEAM_CONFIG=/home/eidos/Warehouse/Teledriving/TCP_agent/epoch=59-last.ckpt
 export CHECKPOINT_ENDPOINT=results_TCP.json
 export SCENARIOS=leaderboard/data/scenarios/all_towns_traffic_scenarios.json
-export SAVE_PATH=/home/eidos/Warehouse/Teledriving/TCP_eval_result/results_TCP
+# export SAVE_PATH=/home/eidos/Warehouse/Teledriving/TCP_eval_result/results_TCP
 
 # export CUDA_VISIBLE_DEVICES=-1
 # JPEG | J2K | BPG | JSCC | AE
 export MODEL_TYPE=BPG
-export QUALITY=51
-
-export PATH_VAE_MODEL=/home/eidos/Warehouse/Teledriving/model_Infocom2024/VAE/ae_awgnSNR_6/ae_model_epoch_20_iter_236920.pth
-# export PATH_CH_MODEL=/home/eidos/Warehouse/Teledriving/model_JSCC_TWC/VAE/Overall_Rayleigh_yesMI_PSNR_-18/channel_model_epoch_20_iter_236900.pth
-export MODE_NOISE=AWGN
-export SNR=4
-export K_RATIO=0
-
+# For JPEG and J2K, higher is better. For BPG lower is better.
+export QUALITY=48
+# Only for JSCC
+export PATH_VAE_MODEL=/home/eidos/Warehouse/Teledriving/model_Infocom2024/VAE/vae_tcp_norm_z4096/vae_model_epoch_10_iter_236910.pth
 # Log
-export USE_WANDB=True
-
+export USE_WANDB=False
 # Gym
 # export FIFO_PATH=/home/eidos/Workspace/GitKraken_ws/meta_driving/fifo_space
 

@@ -38,6 +38,7 @@ with open('./config/tcp_config.yml') as f:
 with open('./config/com_params.yml') as f:
     content = f.read()
     com_params = yaml.load(content, Loader=yaml.SafeLoader)
+    print('SNR: %f dB'%com_params['jscc']['snr_db'])
 
 # Add the top level directory in system path
 top_path_tcp_jscc = dic_path['rootPath_TCP_JSCC']
@@ -66,11 +67,9 @@ TCP_PERCEPTION = os.environ.get('TCP_PERCEPTION', None)
 TCP_MEASUREMENT = os.environ.get('TCP_MEASUREMENT', None)
 MODEL_TYPE = os.environ.get('MODEL_TYPE', None)
 MODE_PRECISION = os.environ.get('MODE_PRECISION', None)
-MODE_NOISE = os.environ.get('MODE_NOISE', None)
-SNR = int(os.environ.get('SNR', None))
-print('SNR: ', SNR)
+
 QUALITY = int(os.environ.get('QUALITY', None))
-K_RATIO = int(os.environ.get('K_RATIO', None))
+
 USE_WANDB = os.environ.get('USE_WANDB', None)
 if USE_WANDB == 'True':
     import wandb
@@ -140,19 +139,14 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
                 self.codec = J2K()
             elif MODEL_TYPE == 'BPG':
                 self.codec = BPG()
-            elif MODEL_TYPE == 'JSCC':
+            elif MODEL_TYPE == 'JSCC' or MODEL_TYPE == 'AE':
                 self.device = torch.device('cuda:0')
-                self.codec = SoftIntroVAE(cdim=3, zdim=1024, 
-                                            channels=[64, 128, 256, 512, 512, 512], 
-                                            image_size=(256,900))
-                self.codec.to(self.device)
-                weights = torch.load(PATH_VAE_MODEL, map_location=self.device)
-                self.codec.load_state_dict(weights['model'], strict=False)
-                self.codec.eval()
-                self.norm_manager = NormalizeManager()
-            elif MODEL_TYPE == 'AE':
-                self.device = torch.device('cuda:0')
-                self.codec = AE(cdim=3, zdim=1024, 
+                if MODEL_TYPE == 'JSCC':
+                    self.codec = SoftIntroVAE(cdim=3, zdim=com_params['jscc']['zdim'], 
+                                                channels=[64, 128, 256, 512, 512, 512], 
+                                                image_size=(256,900))
+                else:
+                    self.codec = AE(cdim=3, zdim=1024, 
                                 channels=[64, 128, 256, 512, 512, 512], 
                                 image_size=(256,900))
                 self.codec.to(self.device)
@@ -402,7 +396,8 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         if PATH_VAE_MODEL is not None:
             del self.codec
         torch.cuda.empty_cache()
-        wandb.log({'Time': time.time()})
+        if USE_WANDB == 'True':
+            wandb.log({'Time': time.time()})
     
     def __2nd_process(self, tick_data, state, rgb_tcp):
         # Change the channel from H*W*C to C*H*W
@@ -416,20 +411,14 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         img_mu, img_logvar = self.codec.encode(rgb)
         # img_z = reparameterize(img_mu, img_logvar)
         
-        # Channel Encoding
-        # ch_mu, ch_logvar = self.ch_manager.encode(img_mu)
-        ch_mu, ch_logvar = img_mu, img_logvar
         # Adding noise
-        if MODE_NOISE == 'AWGN':
-            ch_mu_rec = self.channel_phy.awgn(ch_mu, SNR)
-        elif MODE_NOISE == 'Rayleigh' or MODE_NOISE == 'Rician':
-            ch_mu_rec = self.channel_phy.fading(ch_mu, SNR, K=K_RATIO)
+        if com_params['jscc']['noise_type'] == 'AWGN':
+            img_mu_rec = self.channel_phy.awgn(img_mu, com_params['jscc']['snr_db'], com_params['jscc']['power'])
+        # elif com_params['jscc']['noise_type'] == 'Rayleigh' or com_params['jscc']['noise_type'] == 'Rician':
+        #     img_mu_rec = self.channel_phy.fading(img_mu, com_params['jscc']['snr_db'], K=com_params['jscc']['k_ratio'])
         else:
-            exit()
-            ch_mu_rec = ch_mu
-        
-        # img_mu_rec = self.ch_manager.decode(ch_mu_rec)
-        img_mu_rec = ch_mu_rec
+            print('No noise is added!')
+            img_mu_rec = img_mu
         
         batch_img_rec = self.codec.decode(img_mu_rec)
         # For saving
@@ -438,26 +427,6 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         rgb_recon = self.norm_manager.realBatch_2_tcpBatch(batch_img_rec)
         
         return rgb_recon, tick_data
-    
-    # def psnr_add(self, img_mu, psnr=10, mode='AWGN'):
-    #     max_p = torch.max(torch.square(img_mu), dim=1, keepdim=True)[0]
-    #     noise_sigma = torch.sqrt(max_p * torch.pow(torch.tensor(10).to(self.device), 
-    #                                                torch.tensor(-(psnr/10)).to(self.device)))
-    #     noise = torch.randn(img_mu.shape).to(self.device) * noise_sigma
-        
-    #     if mode=='AWGN':
-    #         # Obtain the peak power of each sample
-    #         img_mu_noise = img_mu + noise
-    #     elif mode=='Rayleigh':
-    #         h = (torch.sqrt(torch.Tensor([0.5])) * torch.randn(img_mu.shape) 
-    #              + 1j * torch.sqrt(torch.Tensor([0.5])) * torch.randn(img_mu.shape)).to(self.device)
-    #         img_mu_noise = torch.abs(h*img_mu) + noise
-    #     elif mode is None:
-    #         img_mu_noise = img_mu
-    #     else:
-    #         print('The noise mode is invalid!')
-    #         exit()
-    #     return img_mu_noise
     
     def __simple_process(self, tick_data: Dict, quality: int = 1):
         # tick_data['rgb'], rgb, and self.img_last are similar
@@ -470,7 +439,7 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
         if self.img_last is None:
             bits_tensor = self.tradicom.e2e_com(bits_tensor, 30)
         else:
-            bits_tensor = self.tradicom.e2e_com(bits_tensor, com_params['tradicom']['ebno_db'])
+            bits_tensor = self.tradicom.e2e_com(bits_tensor, com_params['tradicom']['snr_db'])
         # source decoding
         rgb_recon = self.codec.decode(bits_tensor, bits_length)
         # initialize the last image
